@@ -55,15 +55,14 @@ namespace WebScraper
             // Initialize WebDriver
             var url = projectURL.SelectedValue.ToString(); 
             IWebDriver driver = Scraper.OpenWebSite(url, SelectedDriver.SelectedItem.ToString());
-            // Scraper.CleanDB(conn);
-           //  Scraper.ParsingNode1(driver, conn);
-           //  Scraper.ParsingNode2(driver, conn);
-          //   Scraper.ParsingNode2a(driver, conn);
-          //   Scraper.ParsingNode3(driver, conn);
-           // Scraper.ParsingNode4(driver, conn);
+            Scraper.CleanDB(conn);
+           Scraper.ParsingNode1(driver, conn);
+            Scraper.ParsingNode2(driver, conn);
+            Scraper.ParsingNode2a(driver, conn);
+            Scraper.ParsingNode3(driver, conn);
+            Scraper.ParsingNode4(driver, conn);
+            Scraper.ParsingNode5(driver, conn);
             Scraper.UpdFieledName(driver, conn);
-            //Scraper.ParsingNode5(driver, conn);
-            //Scraper.ParsingNode6(driver, conn);
 
             conn.Close();
         }
